@@ -10,9 +10,9 @@
                 method: "GET",
                 url: "/api/Data/All",
                 dataType: "json"
-            }).success(function (responseData) {
-                JSON.stringify(responseData);
-            }).error(function (error) {
+            }).then(function successCallback(responseData) {
+                return responseData;
+            }, function errorCallback(error) {
                 console.log(error);
             });
         };
@@ -23,9 +23,9 @@
                 url: "/api/Data/Create",
                 data: JSON.stringify(data),
                 dataType: "json"
-            }).success(function (responseData) {
-                JSON.stringify(responseData)
-            }).error(function (error) {
+            }).then(function successCallback(responseData) {
+                return responseData;
+            }, function errorCallback(error) {
                 console.log(error);
                 alert(error.Message);
             });
@@ -37,9 +37,9 @@
                 url: "/api/Data/Edit",
                 data: data,
                 dataType: "json"
-            }).success(function (responseData) {
-                JSON.stringify(responseData)
-            }).error(function (error) {
+            }).then(function successCallback(responseData) {
+                return responseData;
+                }, function errorCallback (error) {
                 console.log(error);
                 alert(error.Message);
             });
@@ -50,9 +50,9 @@
                 method: "GET",
                 url: "/api/Data/" + id,
                 dataType: "json"
-            }).success(function (responseData) {
-                JSON.stringify(responseData)
-            }).error(function (error) {
+            }).then(function successCallback(responseData) {
+                return responseData;
+                }, function errorCallback(error) {
                 console.log(error);
             });
         };
@@ -62,9 +62,9 @@
                 method: "POST",
                 url: "/api/Data/Delete/" + id,
                 dataType: "json"
-            }).success(function (responseData) {
-                JSON.stringify(responseData);
-            }).error(function (error) {
+            }).then(function successCallback(responseData) {
+                responseData;
+                }, function errorCallback(error) {
                 console.log(error);
             });
         };
