@@ -64,9 +64,9 @@
     <Build Include="Tables\Users.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Coqueta.Database.publish.xml" />
+    <PostDeploy Include="Script.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="Script.PostDeployment.sql" />
+    <None Include="Coqueta.Database.publish.xml" />
   </ItemGroup>
 </Project>
