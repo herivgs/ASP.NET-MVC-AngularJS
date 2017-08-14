@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Users";
+ }
+
+<h2>Users</h2>
+
+<div ng-app="DataMain" ng-controller="DataController" ng-init="getAll()" >
+    <div class="row">
+        <div class="col-md-2">
+            <div>
+                <a href="@Url.Action("Create","Data")" class="btn btn-default col-md-12">Add User</a>
+            </div>
+        </div>
+        <div class="col-md-8"></div>
+    </div>
+    <div style="margin-top:20px">
+
+    </div>
+    <table class="table table-responsive table-hover">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="ng-cloak">
+            <tr ng-repeat="item in data ">
+                <td>{{item.Username}}</td>
+                <td>{{item.Email}}</td>
+                <td>{{item.Password}}</td>
+                <td>
+                    <div class="btn btn-group-sm">
+                        <button type="button" class="btn" ng-click="editRoute(item.Id)"><span class="glyphicon glyphicon-pencil"></span></button>
+                        <button type="button" class="btn" ng-click="delete(item.Id)"><span class="glyphicon glyphicon-trash"></span></button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-resource.js"></script>
+    <script src="~/Scripts/ui-grid.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="~/Scripts/App/Data/data-main.js"></script>
+    <script src="~/Scripts/App/Data/controller/data-controller.js"></script>
+    <script src="~/Scripts/App/Data/service/data-service.js"></script>
+}

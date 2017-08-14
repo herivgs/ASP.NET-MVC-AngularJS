@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>Coqueta.Database</Name>
+    <Name>Sample.Database</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{81cb4f39-534b-4690-8160-dfb0305a6fe3}</ProjectGuid>
@@ -12,8 +12,8 @@
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>Coqueta.Database</RootNamespace>
-    <AssemblyName>Coqueta.Database</AssemblyName>
+    <RootNamespace>Sample.Database</RootNamespace>
+    <AssemblyName>Sample.Database</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
@@ -23,7 +23,7 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
-    <TargetDatabase>Coqueta.Database</TargetDatabase>
+    <TargetDatabase>Sample.Database</TargetDatabase>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -67,6 +67,6 @@
     <PostDeploy Include="Script.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Coqueta.Database.publish.xml" />
+    <None Include="Sample.Database.publish.xml" />
   </ItemGroup>
 </Project>

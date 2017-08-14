@@ -9,7 +9,7 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-USE [Coqueta]
+USE [Sample]
 GO
 
 INSERT INTO [dbo].[Users] ([Username], [Email] ,[Password] ,[ConfirmationPassword])
